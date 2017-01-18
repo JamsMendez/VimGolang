@@ -3,6 +3,7 @@ FROM debian:8.7
 MAINTAINER jamsmendez <jamsmendez02@gmail.com>
 
 RUN apt-get update \
+  && apt-get install -y git \
   && apt-get install -y curl \
   && apt-get install -y vim-athena \
 
@@ -25,4 +26,4 @@ RUN apt-get update \
   && /bin/bash -c "source /root/.bashrc" \
   && rm go1.7.4.linux-amd64.tar.gz
 
-WORKDIR /root/Go/src
+WORKDIR /root/Go/src/github.com
