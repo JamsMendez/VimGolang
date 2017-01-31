@@ -17,13 +17,13 @@ RUN apt-get update \
   && mkdir /root/Go/pkg \
   && mkdir /root/Go/src \
   && cd /root \
-  && curl -O https://storage.googleapis.com/golang/go1.7.4.linux-amd64.tar.gz \
-  && tar -C /usr/local -xzf go1.7.4.linux-amd64.tar.gz \
+  && curl -O https://storage.googleapis.com/golang/go1.7.5.linux-amd64.tar.gz \
+  && tar -C /usr/local -xzf go1.7.5.linux-amd64.tar.gz \
   && echo 'export GOROOT=/usr/local/go' >> .bashrc \
   && echo 'export PATH=$PATH:$GOROOT/bin' >> .bashrc \
   && echo 'export GOPATH=/root/Go' >> .bashrc \
   && echo 'export PATH=$GOPATH/bin:$PATH' >> .bashrc \
   && /bin/bash -c "source /root/.bashrc" \
-  && rm go1.7.4.linux-amd64.tar.gz
+  && rm go1.7.5.linux-amd64.tar.gz
 
 WORKDIR /root/Go/src/github.com
